@@ -87,16 +87,18 @@ a {
 
 .brand strong {
   display: block;
-  font-size: 15px;
+  font-size: 16px;
+  line-height: 1.2;
   color: var(--navy);
-  letter-spacing: 0em;
+  letter-spacing: 0.03em;
 }
 
 .brand span {
   display: block;
-  margin-top: 5px;
-  font-size: 17px;
-  font-weight: 800;
+  margin-top: 6px;
+  font-size: 16px;
+  line-height: 1.2;
+  font-weight: 900;
   color: var(--green-dark);
   white-space: nowrap;
 }
