@@ -14,7 +14,7 @@ function Navbar() {
             <NavLink to="/" className="brand" onClick={closeMenu}>
                 <img src={logo} alt="MISON Logo" />
                 <div>
-                    <strong>Microfinance Society of Nepal(MISON)</strong>
+                    <strong>Microfinance Society of Nepal</strong>
                     <span>लघुवित्त समाज नेपाल</span>
                 </div>
             </NavLink>
