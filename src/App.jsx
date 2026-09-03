@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Home from "./pages/Home";
@@ -20,10 +20,6 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
 
-        <Route
-          path="/about"
-          element={<Navigate to="/about/mission-vision-goals" replace />}
-        />
         <Route
           path="/about/mission-vision-goals"
           element={<MissionVisionGoals />}
