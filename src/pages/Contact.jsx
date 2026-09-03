@@ -21,11 +21,11 @@ function Contact() {
                     </div>
                     <div className="contact-row">
                         <FontAwesomeIcon icon={faPhone} />
-                        <p>+977-1-4217496</p>
+                        <p>+977-9851218708<br />+977-9851060413</p>
                     </div>
                     <div className="contact-row">
                         <FontAwesomeIcon icon={faEnvelope} />
-                        <p>kritikpaudel16@gmail.com</p>
+                        <p>mison2080@gmail.com</p>
                     </div>
                 </div>
 

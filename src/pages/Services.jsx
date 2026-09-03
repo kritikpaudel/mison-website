@@ -6,7 +6,7 @@ function Services() {
         <main className="page">
             <section className="page-hero">
                 <h1>Services</h1>
-                <p>Activities and work areas of Microfinance Society of Nepal.</p>
+                <p>Activities and working areas of Microfinance Society of Nepal.</p>
             </section>
 
             <section className="section services-section">

@@ -12,7 +12,6 @@ function MissionVisionGoals() {
             <section className="section mvgoals-section">
                 <div className="mvg-intro-grid">
                     <div className="mvg-card">
-                        <span>01</span>
                         <h3>Vision</h3>
                         <h4>“Empowered Microfinance, Prosperous Nepal.”</h4>
                         <p>
@@ -22,7 +21,6 @@ function MissionVisionGoals() {
                     </div>
 
                     <div className="mvg-card">
-                        <span>02</span>
                         <h3>Mission</h3>
                         <h4>
                             “Driving Excellence through Integration, Innovation, and
@@ -38,7 +36,6 @@ function MissionVisionGoals() {
                 </div>
 
                 <div className="mvg-card goals-card">
-                    <span>03</span>
                     <h3>Strategic Goals</h3>
                     <h4>The 4-P Framework</h4>
 
@@ -79,7 +76,7 @@ function MissionVisionGoals() {
                 </div>
 
                 <div className="section-heading inner-heading">
-                    <span>Core Values</span>
+                    <span>Core Principles</span>
                     <h2>Principles that guide MISON</h2>
                 </div>
 
