@@ -1,36 +1,57 @@
 import { useEffect, useRef, useState } from "react";
 import { NavLink, useLocation } from "react-router-dom";
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 import {
     faBars,
     faXmark,
     faChevronDown,
 } from "@fortawesome/free-solid-svg-icons";
+
 import logo from "../assets/logo.png";
+
 
 function Navbar() {
     const [menuOpen, setMenuOpen] = useState(false);
+
     const [aboutOpen, setAboutOpen] = useState(false);
 
+    const [updatesOpen, setUpdatesOpen] = useState(false);
+
+
     const navbarRef = useRef(null);
+
     const location = useLocation();
+
+
+    /* =====================================================
+       CLOSE NAVIGATION
+    ===================================================== */
 
     const closeEverything = () => {
         setMenuOpen(false);
+
         setAboutOpen(false);
+
+        setUpdatesOpen(false);
     };
 
+
     /*
-      Whenever user moves to another page,
+      Whenever the user moves to another page,
       automatically close mobile menu/dropdowns.
     */
+
     useEffect(() => {
         closeEverything();
     }, [location.pathname]);
 
+
     /*
-      Close dropdown if user clicks outside navbar.
+      Close dropdowns when clicking outside navbar.
     */
+
     useEffect(() => {
         const handleOutsideClick = (event) => {
             if (
@@ -38,48 +59,118 @@ function Navbar() {
                 !navbarRef.current.contains(event.target)
             ) {
                 setAboutOpen(false);
+
+                setUpdatesOpen(false);
             }
         };
 
-        document.addEventListener("mousedown", handleOutsideClick);
-        document.addEventListener("touchstart", handleOutsideClick);
+
+        document.addEventListener(
+            "mousedown",
+            handleOutsideClick
+        );
+
+        document.addEventListener(
+            "touchstart",
+            handleOutsideClick
+        );
+
 
         return () => {
-            document.removeEventListener("mousedown", handleOutsideClick);
-            document.removeEventListener("touchstart", handleOutsideClick);
+            document.removeEventListener(
+                "mousedown",
+                handleOutsideClick
+            );
+
+            document.removeEventListener(
+                "touchstart",
+                handleOutsideClick
+            );
         };
     }, []);
 
-    const aboutIsActive = location.pathname.startsWith("/about/");
+
+    /* =====================================================
+       ACTIVE DROPDOWN STATES
+    ===================================================== */
+
+    const aboutIsActive =
+        location.pathname.startsWith("/about/");
+
+
+    const updatesIsActive =
+        location.pathname.startsWith("/news") ||
+        location.pathname.startsWith("/notice") ||
+        location.pathname.startsWith("/events");
+
 
     return (
-        <header className="navbar" ref={navbarRef}>
+        <header
+            className="navbar"
+            ref={navbarRef}
+        >
+            {/* =================================================
+                BRAND
+            ================================================= */}
+
             <NavLink
                 to="/"
                 className="brand"
                 onClick={closeEverything}
             >
-                <img src={logo} alt="MISON Logo" />
+                <img
+                    src={logo}
+                    alt="MISON Logo"
+                />
+
 
                 <div className="brand-text">
-                    <strong>Microfinance Society of Nepal</strong>
-                    <span>लघुवित्त समाज नेपाल</span>
+                    <strong>
+                        Microfinance Society of Nepal
+                    </strong>
+
+                    <span>
+                        लघुवित्त समाज नेपाल
+                    </span>
                 </div>
             </NavLink>
 
-            <nav className={menuOpen ? "nav-links open" : "nav-links"}>
+
+            {/* =================================================
+                NAVIGATION
+            ================================================= */}
+
+            <nav
+                className={
+                    menuOpen
+                        ? "nav-links open"
+                        : "nav-links"
+                }
+            >
+                {/* HOME */}
+
                 <NavLink
                     to="/"
                     end
                     className={({ isActive }) =>
-                        isActive ? "active-link" : ""
+                        isActive
+                            ? "active-link"
+                            : ""
                     }
                 >
                     Home
                 </NavLink>
 
+
+                {/* =================================================
+                    ABOUT DROPDOWN
+                ================================================= */}
+
                 <div
-                    className={`dropdown ${aboutOpen ? "open" : ""}`}
+                    className={`dropdown ${aboutOpen
+                            ? "open"
+                            : ""
+                        }`}
                 >
                     <button
                         type="button"
@@ -88,14 +179,25 @@ function Navbar() {
                                 ? "dropdown-main active-link"
                                 : "dropdown-main"
                         }
-                        onClick={() => setAboutOpen((prev) => !prev)}
+                        onClick={() => {
+                            setAboutOpen(
+                                (prev) => !prev
+                            );
+
+                            setUpdatesOpen(false);
+                        }}
                         aria-expanded={aboutOpen}
                         aria-haspopup="true"
                     >
-                        <span>About</span>
+                        <span>
+                            About
+                        </span>
 
-                        <FontAwesomeIcon icon={faChevronDown} />
+                        <FontAwesomeIcon
+                            icon={faChevronDown}
+                        />
                     </button>
+
 
                     <div className="dropdown-menu">
                         <NavLink to="/about/mission-vision-goals">
@@ -116,60 +218,125 @@ function Navbar() {
                     </div>
                 </div>
 
+
+                {/* SERVICES */}
+
                 <NavLink
                     to="/services"
                     className={({ isActive }) =>
-                        isActive ? "active-link" : ""
+                        isActive
+                            ? "active-link"
+                            : ""
                     }
                 >
                     Services
                 </NavLink>
 
-                <NavLink
-                    to="/news"
-                    className={({ isActive }) =>
-                        isActive ? "active-link" : ""
-                    }
-                >
-                    News
-                </NavLink>
 
-                <NavLink
-                    to="/notice"
-                    className={({ isActive }) =>
-                        isActive ? "active-link" : ""
-                    }
+                {/* =================================================
+                    UPDATES DROPDOWN
+                ================================================= */}
+
+                <div
+                    className={`dropdown ${updatesOpen
+                            ? "open"
+                            : ""
+                        }`}
                 >
-                    Notice
-                </NavLink>
+                    <button
+                        type="button"
+                        className={
+                            updatesIsActive
+                                ? "dropdown-main active-link"
+                                : "dropdown-main"
+                        }
+                        onClick={() => {
+                            setUpdatesOpen(
+                                (prev) => !prev
+                            );
+
+                            setAboutOpen(false);
+                        }}
+                        aria-expanded={updatesOpen}
+                        aria-haspopup="true"
+                    >
+                        <span>
+                            Updates
+                        </span>
+
+                        <FontAwesomeIcon
+                            icon={faChevronDown}
+                        />
+                    </button>
+
+
+                    <div className="dropdown-menu">
+                        <NavLink to="/news">
+                            News
+                        </NavLink>
+
+                        <NavLink to="/notice">
+                            Notices
+                        </NavLink>
+
+                        <NavLink to="/events">
+                            Events & Gallery
+                        </NavLink>
+                    </div>
+                </div>
+
+
+                {/* CONTACT */}
 
                 <NavLink
                     to="/contact"
                     className={({ isActive }) =>
-                        isActive ? "active-link" : ""
+                        isActive
+                            ? "active-link"
+                            : ""
                     }
                 >
                     Contact
                 </NavLink>
             </nav>
 
+
+            {/* =================================================
+                MOBILE MENU BUTTON
+            ================================================= */}
+
             <button
                 type="button"
                 className="menu-btn"
                 onClick={() => {
-                    setMenuOpen((prev) => !prev);
+                    setMenuOpen(
+                        (prev) => !prev
+                    );
 
                     if (menuOpen) {
                         setAboutOpen(false);
+
+                        setUpdatesOpen(false);
                     }
                 }}
-                aria-label={menuOpen ? "Close navigation" : "Open navigation"}
+                aria-label={
+                    menuOpen
+                        ? "Close navigation"
+                        : "Open navigation"
+                }
                 aria-expanded={menuOpen}
             >
-                <FontAwesomeIcon icon={menuOpen ? faXmark : faBars} />
+                <FontAwesomeIcon
+                    icon={
+                        menuOpen
+                            ? faXmark
+                            : faBars
+                    }
+                />
             </button>
         </header>
     );
 }
+
 
 export default Navbar;

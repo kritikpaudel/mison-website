@@ -3,14 +3,17 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Home from "./pages/Home";
 import Services from "./pages/Services";
-import News from "./pages/News";
-import Notice from "./pages/Notice";
+import News from "./pages/updates/News";
+import Notice from "./pages/updates/Notice";
+import Events from "./pages/updates/Events";
+import EventDetail from "./pages/updates/EventDetail";
 import Contact from "./pages/Contact";
 import MissionVisionGoals from "./pages/about/MissionVisionGoals";
 import ChairpersonMessage from "./pages/about/ChairpersonMessage";
 import ExecutiveCommittee from "./pages/about/ExecutiveCommittee";
 import Membership from "./pages/about/Membership";
 import "./App.css";
+
 
 function App() {
   return (
@@ -37,6 +40,8 @@ function App() {
         <Route path="/services" element={<Services />} />
         <Route path="/news" element={<News />} />
         <Route path="/notice" element={<Notice />} />
+        <Route path="/events" element={<Events />} />
+        <Route path="/events/:slug" element={<EventDetail />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
 
