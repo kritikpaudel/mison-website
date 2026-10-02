@@ -3,7 +3,7 @@ import uday from "../../assets/members/uday-raj-khatiwada.jpg";
 import jhalendra from "../../assets/members/jhalendra-bhattarai.jpeg";
 import pramod from "../../assets/members/pramod-kumar-ghimire.jpg";
 import baburam from "../../assets/members/baburam-neupane.jpg";
-import debendra from "../../assets/members/debendra-bahadur-raut.png";
+import uma from "../../assets/members/uma-bohora-joshi.jpeg";
 import naresh from "../../assets/members/naresh-nepal.jpg";
 import sunil from "../../assets/members/sunil-khanal.jpg";
 import tejhari from "../../assets/members/tejhari-ghimire.png";
@@ -14,10 +14,10 @@ const committee = [
     [jhalendra, "Jhalendra Bhattarai", "Treasurer"],
     [pramod, "Pramod Kumar Ghimire", "General Secretary"],
     [baburam, "Baburam Neupane", "Member"],
-    [debendra, "Debendra Bahadur Raut", "Member"],
     [naresh, "Naresh Nepal", "Member"],
     [sunil, "Sunil Khanal", "Member"],
     [tejhari, "Dr. Tejhari Ghimire", "Member"],
+    [uma, "Uma Bohora Joshi", "Member"],
 ];
 
 function ExecutiveCommittee() {

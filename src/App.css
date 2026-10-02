@@ -5478,6 +5478,123 @@ section,
 }
 
 /* =========================================================
+   EXECUTIVE + CHAIRPERSON FIXES
+========================================================= */
+
+/* Executive committee image alignment */
+
+.member-card {
+  min-width: 0;
+}
+
+.member-card img {
+  display: block;
+
+  width: 220px;
+  height: 240px;
+
+  max-width: 100%;
+
+  margin: 0 auto 18px;
+
+  object-fit: contain;
+  object-position: center;
+}
+
+
+/* Prevent long content from escaping cards */
+
+.member-card h3,
+.member-card p,
+.chairperson-message,
+.chairperson-message h2,
+.chairperson-message>p,
+.message-focus,
+.message-focus h3,
+.focus-item,
+.focus-item p,
+.focus-item strong {
+  min-width: 0;
+  max-width: 100%;
+}
+
+
+/* Long headings such as Members/Partners/Stakeholders */
+
+.chairperson-message h2 {
+  overflow-wrap: anywhere;
+}
+
+
+/* =========================================================
+   MOBILE FIXES
+========================================================= */
+
+@media (max-width: 600px) {
+
+  .chairperson-card {
+    width: 100%;
+
+    padding: 16px;
+
+    overflow: hidden;
+  }
+
+
+  .chairperson-message {
+    width: 100%;
+  }
+
+
+  .chairperson-message h2 {
+    width: 100%;
+
+    font-size: 24px;
+
+    line-height: 1.25;
+
+    letter-spacing: -0.02em;
+  }
+
+
+  .chairperson-message>p {
+    width: 100%;
+
+    font-size: 15px;
+
+    line-height: 1.75;
+
+    overflow-wrap: anywhere;
+  }
+
+
+  .message-focus {
+    width: 100%;
+
+    margin: 24px 0;
+
+    padding: 18px;
+  }
+
+
+  .focus-item p {
+    overflow-wrap: anywhere;
+  }
+
+
+  .member-card img {
+    width: min(210px, 70vw);
+
+    height: 230px;
+
+    margin: 0 auto 18px;
+  }
+
+}
+
+
+
+/* =========================================================
    REDUCED MOTION ACCESSIBILITY
 ========================================================= */
 
