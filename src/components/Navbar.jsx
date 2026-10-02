@@ -120,7 +120,7 @@ function Navbar() {
             >
                 <img
                     src={logo}
-                    alt="MISON Logo"
+                    alt="MiSoN Logo"
                 />
 
 
@@ -168,8 +168,8 @@ function Navbar() {
 
                 <div
                     className={`dropdown ${aboutOpen
-                            ? "open"
-                            : ""
+                        ? "open"
+                        : ""
                         }`}
                 >
                     <button
@@ -239,8 +239,8 @@ function Navbar() {
 
                 <div
                     className={`dropdown ${updatesOpen
-                            ? "open"
-                            : ""
+                        ? "open"
+                        : ""
                         }`}
                 >
                     <button

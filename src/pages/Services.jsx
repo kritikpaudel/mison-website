@@ -14,7 +14,7 @@ function Services() {
                     <ServiceCard icon={faBookOpen} title="Training & Education" text="Microfinance related training, seminars, workshops and educational programs." />
                     <ServiceCard icon={faHandshake} title="Coordination" text="Collaboration with national organizations, experts, service providers and regulators." />
                     <ServiceCard icon={faShieldHalved} title="Governance Support" text="Advisory support for internal control, management systems and good governance." />
-                    <ServiceCard icon={faPeopleGroup} title="Member Network" text="Creating a professional network of people involved in the microfinance sector." />
+                    <ServiceCard icon={faPeopleGroup} title="Member Network" text="Creating a professional network of people involved in the microfinance sector of national and international." />
                 </div>
             </section>
         </main>

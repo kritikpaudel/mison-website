@@ -83,7 +83,7 @@ function MissionVisionGoals() {
                 <div className="values-grid">
                     <div className="about-card">
                         <h3>Unity</h3>
-                        <p>Harmonizing the voices of experts and practitioners.</p>
+                        <p>Harmonizing the voices of experts and practitioners of microfinance.</p>
                     </div>
 
                     <div className="about-card">
