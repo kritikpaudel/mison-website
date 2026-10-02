@@ -77,7 +77,7 @@ function MissionVisionGoals() {
 
                 <div className="section-heading inner-heading">
                     <span>Core Principles</span>
-                    <h2>Principles that guide MISON</h2>
+                    <h2>Principles that guide MiSoN</h2>
                 </div>
 
                 <div className="values-grid">

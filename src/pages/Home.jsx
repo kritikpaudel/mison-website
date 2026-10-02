@@ -136,7 +136,7 @@ function Home() {
                         <div className="hero-actions">
 
                             <Link to="/about/mission-vision-goals" className="btn primary">
-                                Explore MISON
+                                Explore MiSoN
                             </Link>
 
 
@@ -165,7 +165,7 @@ function Home() {
                 <div className="section-heading">
 
                     <span>
-                        About MISON
+                        About MiSoN
                     </span>
 
 
@@ -175,7 +175,7 @@ function Home() {
 
 
                     <p>
-                        Explore MISON’s purpose, leadership, executive committee
+                        Explore MiSoN’s purpose, leadership, executive committee
                         and membership structure through dedicated pages.
                     </p>
 
@@ -187,7 +187,7 @@ function Home() {
                     <HomeAboutCard
                         icon={faBullseye}
                         title="Mission, Vision and Goals"
-                        text="Discover the purpose, strategic direction and 4-P framework that guide MISON."
+                        text="Discover the purpose, strategic direction and 4-P framework that guide MiSoN."
                         link="/about/mission-vision-goals"
                     />
 

@@ -12,7 +12,7 @@ function Contact() {
             <section className="section contact-section">
                 <div className="contact-info">
                     <span>Contact Details</span>
-                    <h2>Get in touch with MISON</h2>
+                    <h2>Get in touch with MiSoN</h2>
                     <p>Contact details can be updated after confirmation from the organization.</p>
 
                     <div className="contact-row">
