@@ -1041,7 +1041,7 @@ html {
 
 .about-card {
   position: relative;
-
+  text-align: justify;
   min-height: 250px;
 
   padding: 30px;
